@@ -38,3 +38,7 @@ target_link_libraries(framelist tag)
 add_executable(strip-id3v1 strip-id3v1.cpp)
 target_link_libraries(strip-id3v1 tag)
 
+########### next target ###############
+add_executable(imgreader imgreader.cpp)
+target_link_libraries(imgreader tag)
+
