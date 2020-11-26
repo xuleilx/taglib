@@ -24,3 +24,8 @@ licenses if you are considering using TagLib in your project.
   [GNU Lesser General Public License]: http://www.gnu.org/licenses/lgpl.html
   [Mozilla Public License]: http://www.mozilla.org/MPL/MPL-1.1.html
 
+### Compile
+  taglib# cmake .
+  taglib# make
+  examples/build# cmake ../
+  examples/build# make

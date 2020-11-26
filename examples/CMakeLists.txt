@@ -1,4 +1,9 @@
+cmake_minimum_required(VERSION 3.2)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=c++11 ")
+
 include_directories(
+  ${CMAKE_CURRENT_SOURCE_DIR}/../
   ${CMAKE_CURRENT_SOURCE_DIR}/../taglib
   ${CMAKE_CURRENT_SOURCE_DIR}/../taglib/toolkit
   ${CMAKE_CURRENT_SOURCE_DIR}/../taglib/ape
@@ -16,7 +21,7 @@ endif()
 ########### next target ###############
 
 add_executable(tagreader tagreader.cpp)
-target_link_libraries(tagreader tag)
+target_link_libraries(tagreader tag z)
 
 ########### next target ###############
 
@@ -31,14 +36,14 @@ target_link_libraries(tagwriter tag)
 ########### next target ###############
 
 add_executable(framelist framelist.cpp)
-target_link_libraries(framelist tag)
+target_link_libraries(framelist tag z)
 
 ########### next target ###############
 
 add_executable(strip-id3v1 strip-id3v1.cpp)
-target_link_libraries(strip-id3v1 tag)
+target_link_libraries(strip-id3v1 tag z)
 
 ########### next target ###############
 add_executable(imgreader imgreader.cpp)
-target_link_libraries(imgreader tag)
+target_link_libraries(imgreader tag z)
 
